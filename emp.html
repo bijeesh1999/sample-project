@@ -9,11 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">    <link rel="stylesheet" href="emp.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">    
+    <link rel="stylesheet" href="emp.css">
 
 </head>
 <body>
     <div class="wraper">
+        <input type="checkbox" id="checking">
+        <label for="checking"><i class="fa-solid fa-bars"></i></label>
         <div class="menu">
             <div class="logo"><h3>Employee<br><p>Management</p></h3></div>
             <div class="pages">
@@ -61,7 +64,9 @@
                                 <h6>of n</h6>
                             </div>
                             <div class=" ps-4">
-                                <button type="button" class="btn btn-primary "><h6 class="mb-0 py-1 text-white">Add Employee</h6></button>
+                                <button type="button" class="btn btn-primary sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Add Employee
+                                  </button>
                             </div>
                     </div>
                         
@@ -75,99 +80,24 @@
                             <th class="tbl"scope="col">Email</th>
                             <th class="tbl"scope="col">Phone</th>
                             <th class="tbl"scope="col">Gender</th>
-                            <th class="tbl"scope="col">dob</th>
+                            <th class="tbl"scope="col">State</th>
                             <th class="tbl"scope="col">Country</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="EmpTable">
                         <tr class="details">
-                            <td>#1</td>
-                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
+                            <td></td>
+                            <td class="user"><div class="employee"></div></td>           <!-- <img src="img/Rectangle 347.png"> -->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     
-                        <tr class="details">
-                            <td>#2</td>   
-                             <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                   
-                        <tr class="details">
-                            <td>#3</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                   
-                        <tr class="details">
-                            <td>#4</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                    
-                        <tr class="details">
-                            <td>#5</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                        <tr class="details">
-                            <td>#6</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                        <tr class="details">
-                            <td>#7</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                        <tr class="details">
-                            <td>#8</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
-                        <tr class="details">
-                            <td>#9</td>                            <td class="user"><div class="employee"><img src="img/Rectangle 347.png"></div>Otto</td>
-                            <td>manumanu@gmail.com</td>
-                            <td>9074015133</td>
-                            <td>male</td>
-                            <td>20-01-1999</td>
-                            <td>India</td>
-                            <td><i class="fa-solid fa-ellipsis"></i></td>
-                        </tr>
+                        <!--  -->
                     </tbody>
                     
                       
@@ -176,7 +106,7 @@
 
             <!-- </div> -->
             <nav aria-label="Page navigation example">
-                <ul class="pagination mt-3 mb-4">
+                <ul class="pagination mt-3 mb-3">
                   <li class="page-item">
                     <a class="page-link" href="#" aria-label="Previous">
                       <span aria-hidden="true">&laquo;</span>
@@ -206,135 +136,196 @@
 
     <!-- ========================================= emp table end ============================= -->
     <!-- +++++++++++++++++++++++++++++++++++++ emp form add start +++++++++++++++++++++++++++++++++++ -->
-    <div class="container-sm">
-        <div class="row forms">
-            <form class="col-8 main  bg-white   ">
+    
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header b-0">
                 <header><h4>Basic Details</h4></header>
-                <div class="card">
-                    <div class="card-body">
-                    <input class="form-control fileup" type="file" id="formFile">
-                  </div>
-                  <div class="upload">
-                    <i class="fa-solid fa-file-arrow-up text-primary"></i> 
-                    <h6 class="text-primary">Upload Image</h6> 
-                    <h6 class="png">PNG, JPG files are allowed</h6>
-                </div>
-                </div>
-                <div class="row input">
-                    <div class="col-3  imp">
-                        <label for="salutation" class="form-label salutation ">Salutation<span class="text-danger">*</span></label>
-                            <select id="user" class="form-label mb-0"  name="userlist" form="userform">
-                            <option class="select " selected>select</option>
-                            <option value="mr">Mr</option>
-                            <option value="mrs">Mrs</option>
-                            <option value="dr">Dr</option>
-                            <option value="adv">Adv</option>
-                            <option value="adv">Other</option>
-                        </select>
-                    </div>
-                    <!-- <label for="exampleInputEmail1">Email address</label> -->
-                    <div class="col imp">
-                        <label for="validationCustom01" class="form-label">First name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="joe" required>
-                        <!-- <input placeholder="Enter search term" aria-label="Enter search term"> -->
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                    </div>
-                    <div class="col imp">
-                        <label for="validationCustom02" class="form-label">Last name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="doe"aria-label="Enter search term" required>
-                        <div class="valid-feedback">
-                         Looks good!
-                    </div>
-                    </div>
-                 </div>
-                 <div class="row input">
-                    <div class="col imp">
-                        <label for="exampleInputEmail1" class="form-label">Email address<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" area>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
-                    <div class="col imp">
-                        <label for="typePhone" class="form-label">Mobile number<span class="text-danger">*</span></label>
-                        <input type="tel" id="typePhone" class="form-control"placeholder="Enter Phone" />
-                    </div>
-                 </div>
-                 <div class="row input">
-                    <div class="col-6 imp"> 
-                        <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
-                            <input class="form-control" type = "date" name = "date" >  
-                    </div> 
-                    <div class="col imp radio">
-                        <div class="row gap">
-                            <label for="exampleInputEmail1" class="form-label imp">Gender<span class="text-danger">*</span></label>
-                            <div class="col gap">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked><label class="form-label">Male</label>
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" ><label class="form-label">Female</label>      
-                                <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
 
+
+
+                <form  id="main" class="col-8 main  bg-white " name="userform" method="post"  onsubmit="return validation()" >
+                    <!-- <header><h4>Basic Details</h4><i class="fa-solid fa-xmark"></i></header> -->
+                    <div class="card">
+                        <div class="card-body">
+                        <input class="form-control fileup" type="file" id="formFile">
+                      </div>
+                      <div class="upload">
+                        <i class="fa-solid fa-file-arrow-up text-primary"></i> 
+                        <h6 class="text-primary">Upload Image</h6> 
+                        <h6 class="png">PNG, JPG files are allowed</h6>
+                    </div>
+                    </div>
+                    <div class="row input">
+                        <div class="col-3  imp">
+                            <label for="user" class="form-label salutation ">Salutation<span class="text-danger">*</span></label>
+                                <select id="user" class="form-label mb-0  selections"  name="userlist" form="userform">
+                                <!-- <option class="select " selected>select</option> -->
+                                <option value="mr" selected>Mr</option>
+                                <option value="mrs">Mrs</option>
+                                <option value="dr">Dr</option>
+                                <option value="adv">Adv</option>
+                                <option value="adv">Other</option>
+                            </select>
+                        </div>
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <div class="col imp" id="imp">
+                            <label for="validationCustom01" class="form-label">First name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="validationCustom01" name="myfname" placeholder="joe" autocomplete="off">
+                            <!-- <input placeholder="Enter search term" aria-label="Enter search term"> -->
+                            <!-- <div class="valid-feedback">
+                              Looks good!
+                            </div> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="validationCustom02" class="form-label">Last name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="doe"aria-label="Enter search term" >
+                            <div class="valid-feedback">
+                             Looks good!
+                        </div>
+                        </div>
+                     </div>
+                     <div class="row input">
+                        <div class="col imp">
+                            <label for="Email1" class="form-label">Email address<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="Email1"  placeholder="example@gmail.com">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="typePhone" class="form-label">Mobile number<span class="text-danger">*</span></label>
+                            <input type="tel" id="typePhone" class="form-control"placeholder="Enter Phone" />
+                        </div>
+                     </div>
+
+                     <div class="row input">
+                        <div class="col imp">
+                            <label for="username" class="form-label">username<span class="text-danger">*</span></label>
+                            <input type="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="enter pass">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="col imp">
+                            <label for="password" class="form-label">password<span class="text-danger">*</span></label>
+                            <input type="password" id="password" class="form-control"placeholder="Enter password" />
+                        </div>
+                     </div>
+
+
+
+
+
+                     <div class="row input">
+                        <div class="col-6 imp"> 
+                            <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
+                                <input id="date" class="form-control" type = "date" name = "date" >  
+                        </div> 
+                        <div class="col imp radio">
+                            <div class="row gap">
+                                <label for="Gender" class="form-label imp">Gender<span class="text-danger">*</span></label>
+                                <div class="col gap" id="radio">
+                                    <input class="form-check-input Gender" type="radio" name="Gender" value="male" id="flexRadioDefault1"checked><label class="form-label">Male</label>
+                                    <input class="form-check-input Gender" type="radio" name="Gender" value="female" id="flexRadioDefault2" ><label class="form-label">Female</label>      
+                                    <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+                            <label for="Qualification" class="form-label">Qualification<span class="text-danger">*</span></label>
+                            <input type="text" id="Qualification" class="form-control"name="Qualification" placeholder="Enter Qualification" />
+    
+                        </div>
+
+                        <div class="col-12">
+                            <label for="exampleInputEmail1" class="form-label">Address<span class="text-danger">*</span></label>
+                            <input type="text" id="homename" class="form-control"name="address" placeholder="Enter Adderss" />
+    
+                        </div>
+
+
+
+
+                        
+                        <div class="row input">
+                            <div class="col imp">
+                                <label for="exampleInputEmail1" class="form-label">Country<span class="text-danger">*</span></label>
+                                <select id="Country"  name="carlist" form="carform" class="selections">
+                                    <!-- <option class="select" selected>select Country</option> -->
+                                    <option value="India" selected>India</Ioption>
+                                    <option value="America">America</option>
+                                    <option value="Jappan">Jappan</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col imp">
+                                <label for="exampleInputEmail1" class="form-label">State<span class="text-danger">*</span></label>
+                                <select id="state"  name="carlist" form="carform" class="selections">
+                                    <!-- <option class="select" selected>select state</option> -->
+                                    <option value="Kerala" selected>Kerala</option>
+                                    <option value="TamilNadu">TamilNadu</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Bangloor">Bangloor</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
                         </div>
-                        
-                    </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="exampleInputEmail1" class="form-label">Address<span class="text-danger">*</span></label>
-                        <input type="text" id="form7Example4" class="form-control"placeholder="Enter Adderss" />
-
-                    </div>
-                    <div class="row input">
-                        <div class="col imp">
-                            <label for="exampleInputEmail1" class="form-label">Country<span class="text-danger">*</span></label>
-                            <select id="Country"  name="carlist" form="carform">
-                                <option class="select" selected>select Country</option>
-                                <option value="mr">Mr</option>
-                                <option value="mrs">Mrs</option>
-                                <option value="dr">Dr</option>
-                                <option value="adv">Adv</option>
-                                <option value="adv">Other</option>
-                            </select>
+                        <div class="row input">
+                            <div class="col imp">
+                                <label for="city" class="form-label">City<span class="text-danger">*</span></label>
+                                <input type="text" id="city" class="form-control"placeholder="Enter City" />
+                            </div>
+                            <div class="col imp">
+                                <label for="Pin/Zip" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
+                                <input type="text" id="pin" class="form-control"placeholder="Pin/Zip" />
+                            </div>
                         </div>
-                        <div class="col imp">
-                            <label for="exampleInputEmail1" class="form-label">State<span class="text-danger">*</span></label>
-                            <select id="state"  name="carlist" form="carform">
-                                <option class="select" selected>select state</option>
-                                <option value="mr">Mr</option>
-                                <option value="mrs">Mrs</option>
-                                <option value="dr">Dr</option>
-                                <option value="adv">Adv</option>
-                                <option value="adv">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row input">
-                        <div class="col imp">
-                            <label for="city" class="form-label">City<span class="text-danger">*</span></label>
-                            <input type="text" id="city" class="form-control"placeholder="Enter City" />
-                        </div>
-                        <div class="col imp">
-                            <label for="Pin/Zip" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
-                            <input type="text" id="city" class="form-control"placeholder="Pin/Zip" />
-                        </div>
-                    </div>
-                    <div class="col-12 bg-white">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <button class="btn text-primary me-sm-2" type="button">Cancel</button>
-                          <button class="btn btn-primary" type="button">add employee</button>
-                        </div>
-                      </div>
-                </form> 
+                    <!-- </form>  -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary py-3">add employee</button>
+                </div>
+            </form> 
+            </div> 
+            
             </div>
-        </div> 
-        <br> 
+            </div> 
+        <!-- <br>  -->
 
 
 
                 <!-- +++++++++++++++++++++++++++++++++++++ emp form add start +++++++++++++++++++++++++++++++++++ -->
-    <div class="container-sm">
-        <div class="row forms">
-            <form class="col-8 main  bg-white   ">
-                <header><h4>Edit Emploee</h4></header>
+   
+
+
+                
+
+            <div class="modal fade" id="viewempmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header b-0">
+                        <header><h4>Edit Emploee</h4></header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+
+
+
+
+
+            <form class="col-8 main  bg-white "id="formupdate">
+                <!-- <header><h4>Edit Emploee</h4><i class="fa-solid fa-xmark"></i></header> -->
                 <div class=" employeeimg">
                     <div class="empimage">
                         <div class="empimg">
@@ -346,8 +337,8 @@
                 <div class="row input">
                     <div class="col-3  imp">
                         <label for="salutation" class="form-label salutation ">Salutation<span class="text-danger">*</span></label>
-                            <select id="user" class="form-label mb-0"  name="userlist" form="userform">
-                            <option class="select " selected>select</option>
+                            <select id="user" class="form-label mb-0 selections"  name="userlist" form="userform">
+                            <!-- <option class="select " selected>select</option> -->
                             <option value="mr">Mr</option>
                             <option value="mrs">Mrs</option>
                             <option value="dr">Dr</option>
@@ -358,7 +349,7 @@
                     <!-- <label for="exampleInputEmail1">Email address</label> -->
                     <div class="col imp">
                         <label for="validationCustom01" class="form-label">First name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="joe" required>
+                        <input type="text" class="form-control" id="validation01" placeholder="joe" required>
                         <!-- <input placeholder="Enter search term" aria-label="Enter search term"> -->
                         <div class="valid-feedback">
                           Looks good!
@@ -366,7 +357,7 @@
                     </div>
                     <div class="col imp">
                         <label for="validationCustom02" class="form-label">Last name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="doe"aria-label="Enter search term" required>
+                        <input type="text" class="form-control" id="validation02" placeholder="doe"aria-label="Enter search term" required>
                         <div class="valid-feedback">
                          Looks good!
                     </div>
@@ -380,13 +371,31 @@
                     </div>
                     <div class="col imp">
                         <label for="typePhone" class="form-label">Mobile number<span class="text-danger">*</span></label>
-                        <input type="tel" id="typePhone" class="form-control"placeholder="Enter Phone" />
+                        <input type="phone" id="typephone" class="form-control"placeholder="Enter Phone" />
                     </div>
                  </div>
+
+
+                 <div class="row input">
+                    <div class="col imp">
+                        <label for="username" class="form-label">username<span class="text-danger">*</span></label>
+                        <input type="username" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="enter pass">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="col imp">
+                        <label for="password" class="form-label">password<span class="text-danger">*</span></label>
+                        <input type="password" id="Password" class="form-control"placeholder="Enter password" />
+                    </div>
+                 </div>
+
+
+
+
+
                  <div class="row input">
                     <div class="col-6 imp"> 
                         <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
-                            <input class="form-control" type = "date" name = "date" >  
+                            <input class="form-control" type = "date" name = "date" id="date">  
                     </div> 
                     <div class="col imp radio">
                         <div class="row gap">
@@ -400,6 +409,19 @@
                         </div>
                         
                     </div>
+
+
+
+
+                    <div class="col-12">
+                        <label for="Qualification" class="form-label">Qualification<span class="text-danger">*</span></label>
+                        <input type="text" id="qualification" class="form-control"name="Qualification" placeholder="Enter Qualification" />
+
+                    </div>
+
+
+
+
                     </div>
                     <div class="col-12">
                         <label for="exampleInputEmail1" class="form-label">Address<span class="text-danger">*</span></label>
@@ -409,96 +431,88 @@
                     <div class="row input">
                         <div class="col imp">
                             <label for="exampleInputEmail1" class="form-label">Country<span class="text-danger">*</span></label>
-                            <select id="Country"  name="carlist" form="carform">
-                                <option class="select" selected>select Country</option>
-                                <option value="mr">Mr</option>
-                                <option value="mrs">Mrs</option>
-                                <option value="dr">Dr</option>
-                                <option value="adv">Adv</option>
-                                <option value="adv">Other</option>
+                            <select id="Country"  name="carlist" form="carform" class="selections">
+                                <!-- <option class="select" selected>select Country</option> -->
+                                <option value="India" selected>India</Ioption>
+                                    <option value="America">America</option>
+                                    <option value="Jappan">Jappan</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="col imp">
                             <label for="exampleInputEmail1" class="form-label">State<span class="text-danger">*</span></label>
-                            <select id="state"  name="carlist" form="carform">
-                                <option class="select" selected>select state</option>
-                                <option value="mr">Mr</option>
-                                <option value="mrs">Mrs</option>
-                                <option value="dr">Dr</option>
-                                <option value="adv">Adv</option>
-                                <option value="adv">Other</option>
+                            <select id="state"  name="carlist" form="carform" class="selections">
+                                <!-- <option class="select" selected>select state</option> -->
+                                <option value="Kerala" selected>Kerala</option>
+                                <option value="TamilNadu">TamilNadu</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Bangloor">Bangloor</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
                     <div class="row input">
                         <div class="col imp">
                             <label for="city" class="form-label">City<span class="text-danger">*</span></label>
-                            <input type="text" id="city" class="form-control"placeholder="Enter City" />
+                            <input type="text" id="City" class="form-control"placeholder="Enter City" />
                         </div>
                         <div class="col imp">
-                            <label for="Pin/Zip" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
-                            <input type="text" id="city" class="form-control"placeholder="Pin/Zip" />
+                            <label for="Pin" class="form-label">Pin/Zip<span class="text-danger">*</span></label>
+                            <input type="text" id="pinno" class="form-control"placeholder="Pin/Zip" />
                         </div>
                     </div>
-                    <div class="col-12 bg-white">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <button class="btn text-primary me-sm-2" type="button">Cancel</button>
-                          <button class="btn btn-primary" type="button">Save Changes</button>
-                        </div>
-                      </div>
-                </form>
-      </div>
-    </div>
-    <br>
+               
 
 
-               <!-- +++++++++++++++++++++++++++++++++++++ emp form add start +++++++++++++++++++++++++++++++++++ -->
-               <div class="container-sm">
-                <div class="row forms">
-                    <form class="col-8 main  bg-white   ">
-                      <div class="empdet">
-                        <div class="bgimg">
-                            <img src="img/empbg.png" alt="">
-                            <div class="empfinal">
-                                <img src="img/emp.png">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <!-- <div class="col"></div> -->
-                        </div>
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <!-- <div class="col"></div> -->
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                hell
-                            </div>
-                        </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary py-3">Save Changes</button>
+                </div>
+
+            </form>
+            </div> 
+            
+            </div>
+         </div> 
+        </div>
+     
+    <!-- <br> -->
+
+
+               <!-- +++++++++++++++++++++++++++++++++++++ emp form end +++++++++++++++++++++++++++++++++++ -->
+
                         
 
 
+    <div class="deletemodal p-3" id="popup">
+        <header class="py-3">
+           <h3>delete employee</h3>
+        </header>
+        <div class="modalb py-3">
+           <P >do you want delete this employee</P>
+        </div>
+       <div class="mfootr py-3">
+           <button class="cancel" onclick="cancel()">cancel</button>
+           <button class="deleting btn btn-danger " onclick="deleting()">delete</button>
+       </div>
+    </div>
+
+
+<div id="shade" onclick="cancel()"></div>
 
 
 
-
-                      </div>
-                    </form>
-                 </div>
-                </div>
-             <br>
     
 
     <!-- bootstrap js connection -->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="emp.js"></script>
+    <script src="post.js"></script>
+    <!-- <script src="validation.js"></script> -->
+    <script src="update.js"></script>
 </body>
 </html>
