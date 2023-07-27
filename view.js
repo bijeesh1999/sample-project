@@ -12,10 +12,22 @@ function viwempdetails(id){
 
     })
 
+
+    
+   
+
+
+
+
+
+
     .then(res => res.json())
     .then(employe =>{
         // console.log(employe);
         const empdetails=document.getElementById("employeedet");
+
+
+       
     
         empdetails.innerHTML=`
 
@@ -27,7 +39,7 @@ function viwempdetails(id){
             </div>
             <div class="namemale">
                 <div class="name">
-                    <h3>${employe.firstName +""+ employe.lastName}</h3>
+                    <h3>${employe.firstName +" "+ employe.lastName}</h3>
                 </div>
                 <div class="email">
                     <p>${employe.email}</p>
@@ -72,39 +84,3 @@ viwempdetails(id);
 
 
 
-// function deldet(){
-//     alert("hgf");
-
-//     alert("helo")
-
-
-//   //  console.log(id);
-//   //    alert("in the console");
-
-//     // fetch(`http://localhost:3000/employees/${id}`,{
-//     //     method:"DELETE",
-
-        
-//     // })
-
-   
-
-//     // .then(res =>res.json())
-//     // .then(employe =>{
-//     //     // console.log(employe);
-        
-
-
-        
-
-
-    
-
-//     //     alert("warning");
-
-//     // })
-// };
-
-
-
-// deldet();

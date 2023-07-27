@@ -10,10 +10,6 @@ function update(id){
     fetch(`http://localhost:3000/employees/${id}`,{
         method:"GET",
 
-
-
-
-
     })
 
     .then(res => res.json())
@@ -37,7 +33,7 @@ function update(id){
 
 
         // document.getElementById("date").value=employe.dob;
-
+  
         document.getElementsByTagName("name").value=employe.gender;
 
         document.getElementById("qualification").value=employe.qualifications;
@@ -54,7 +50,7 @@ function update(id){
         document.getElementById("pinno").value=employe.pin;
 
         var dobf=document.getElementById("date").value=employe.dob;
-        alert(dobf);
+        // alert(dobf);
 
 
     //     var datee=employe.dob;
@@ -77,9 +73,6 @@ function update(id){
 
     //    document.getElementById("date").value=dformat;
 
-
-
-
     })
 
     
@@ -91,7 +84,7 @@ function update(id){
     upobject.addEventListener('submit',function(e){
         e.preventDefault();
 
-        alert("formupdate");
+        // alert("formupdate");
 
         let upobj={
         salutation:document.getElementById("user").value,
@@ -135,6 +128,8 @@ function update(id){
         method:"PUT",
         headers:{
             "content-type":"application/json",
+
+            
         },
 
         body:JSON.stringify(upobj),
@@ -147,8 +142,12 @@ function update(id){
 
     .then(res => res.json())
         .then(employe =>{console.log(employe)
+
+            refresh();
+
         })
    
+        document.getElementById("edit").style.display="grid";
 
 
     });

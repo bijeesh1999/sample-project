@@ -20,8 +20,8 @@
         <div class="menu">
             <div class="logo"><h3>Employee<br><p>Management</p></h3></div>
             <div class="pages">
-                <h6><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></h6>
-                <h6><a href="#"><i class="fa-solid fa-chart-simple"></i>Employees</a></h6>
+                <h6 onclick="dashboard()"><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></h6>
+                <h6 onclick="employees()"><a href="#"><i class="fa-solid fa-chart-simple"></i>Employees</a></h6>
                 <h6><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></h6>
                 <h6><a href="#"><i class="fa-solid fa-lock"></i>Logout</a></h6>
             </div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             
-            <div class="containerone  py-3 px-0">
+            <div class="containerone  py-3 px-0"id="empcontainer">
                 <div class="row1 p-3">
                     <div class="employlist p-0">
                         <!-- <div class="logo"><h3>Employees List</h3> -->
@@ -229,8 +229,8 @@
                                 <label for="Gender" class="form-label imp">Gender<span class="text-danger">*</span></label>
                                 <div class="col gap" id="radio">
                                     <input class="form-check-input Gender" type="radio" name="Gender" value="male" id="flexRadioDefault1"checked><label class="form-label">Male</label>
-                                    <input class="form-check-input Gender" type="radio" name="Gender" value="female" id="flexRadioDefault2" ><label class="form-label">Female</label>      
-                                    <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+                                    <input class="form-check-input Gender" type="radio" name="Gender" value="female" id="flexRadioDefault0" ><label class="form-label">Female</label>      
+                                    <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault09" >Other       -->
     
                                 </div>
                             </div>
@@ -401,8 +401,8 @@
                         <div class="row gap">
                             <label for="exampleInputEmail1" class="form-label imp">Gender<span class="text-danger">*</span></label>
                             <div class="col gap">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked><label class="form-label">Male</label>
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" ><label class="form-label">Female</label>      
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7"checked><label class="form-label">Male</label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" ><label class="form-label">Female</label>      
                                 <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
 
                             </div>
@@ -495,8 +495,15 @@
         </div>
        <div class="mfootr py-3">
            <button class="cancel" onclick="cancel()">cancel</button>
-           <button class="deleting btn btn-danger " onclick="deleting()">delete</button>
+           <button class="deleting btn btn-danger " id="del">delete</button>
        </div>
+    </div>
+
+
+
+    <div id="edit">
+        <p>employee updated succesfully</p>
+        <button id="ok" onclick="ok()">ok</button>
     </div>
 
 

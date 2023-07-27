@@ -216,7 +216,10 @@ post.addEventListener('submit',function(e){
 
         let dateformat=year + "-" + month + "-" + day;
         return dateformat;
+
+    
     }
+   
 
 
 
@@ -271,7 +274,11 @@ post.addEventListener('submit',function(e){
     method:'post', headers:{
         'content-type':'application/json'
     },
+    
     body:JSON.stringify(details)
+
+   
+
  })
 
 
@@ -279,7 +286,7 @@ post.addEventListener('submit',function(e){
  .then(data=>{
     console.log(data);
  })
-
+ refresh();
  console.log(details);
 
 })
