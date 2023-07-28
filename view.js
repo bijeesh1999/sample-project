@@ -24,6 +24,11 @@ function viwempdetails(id){
     .then(res => res.json())
     .then(employe =>{
         // console.log(employe);
+
+       
+        
+
+        // alert(mmm);
         const empdetails=document.getElementById("employeedet");
 
 
@@ -48,7 +53,7 @@ function viwempdetails(id){
         </div>
         <div class="row profile">
             <div class="col"> <label for="">Gender</label><p>${employe.gender}</p></div>
-            <div class="col"><label for="">Age</label><p>${employe.dob}</p></div>
+            <div class="col" id="age"><label for="">Age</label><p id="ageof"></p></div>
             <div class="col"><label for="">Date of Birth</label><p>${employe.dob}</p></div>
         </div>
         <div class="row profile">
@@ -68,15 +73,53 @@ function viwempdetails(id){
             </div>
         </div>
         
-      </div> `;      
+      </div> `;
+
+
+      var dmy=employe.dob;
+      var myd=format(dmy);
+    //   console.log(myd);
+
+      var age=ageCalc(myd);
+      console.log(age);
+
+      document.getElementById("ageof").innerHTML=age;
+    
+
+
+
+
+
+    //   var dformat=formatchange(dobirth);
+
+      function format(dmy){
+          const array=dmy.split("-");
+          let day=array[0];
+          let month=array[1];
+          let year=array[2];
+  
+          let dateformat=year + "-" + month + "-" + day;
+          return dateformat;
+  
+      };
         
-        
+
+      function ageCalc(myd){
+        var birthDate = new Date(myd);
+        var currentDate = new Date();
+       console.log(currentDate);
+       console.log(birthDate);
+       var age = currentDate.getFullYear()-birthDate.getFullYear();
+
+    //    console.log(age);
+        return age;
+        }  
     })
-
-
 };
 
 viwempdetails(id);
+
+
 
 
 

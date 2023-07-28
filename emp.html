@@ -293,8 +293,8 @@
                     <!-- </form>  -->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary py-3">add employee</button>
+                    <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal" onclick="reload()">Cancel</button>
+                    <button type="submit" class="btn btn-primary py-3" id="addemp">add employee</button>
                 </div>
             </form> 
             </div> 
@@ -395,7 +395,7 @@
                  <div class="row input">
                     <div class="col-6 imp"> 
                         <label for="date" class="form-label text-capitalize">Date of Birth<span class="text-danger">*</span></label>
-                            <input class="form-control" type = "date" name = "date" id="date">  
+                            <input class="form-control" type = "date" name = "date" id="date1">  
                     </div> 
                     <div class="col imp radio">
                         <div class="row gap">
@@ -468,7 +468,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary py-3">Save Changes</button>
+                    <button type="submit" class="btn btn-primary py-3"onclick="reload()">Save Changes</button>
                 </div>
 
             </form>

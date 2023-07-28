@@ -88,14 +88,14 @@ function validation(){
 
 
     var dob=document.getElementById("date").value;
-    if(dob!=""){
-        document.getElementById("date").style.border="1px solid green";
+    if(dob==""){
+        document.getElementById("date").style.border="1px solid red";
+        document.getElementById("date").focus();
+        return false;
 
     }else{
-        document.getElementById("date").style.border="1px solid red";
-            document.getElementById("date").focus();
-            // alert("incorrect")
-            return false;
+        document.getElementById("date").style.border="1px solid green";
+           
     }
 
 
@@ -153,11 +153,19 @@ function validation(){
     }
 
 
-   
+   if (true){
+
+    // document.getElementById("staticBackdrop").style.display="none";
+    // document.getElementByClassName("modal-backdrop").style.display="none";
+
+
+   }
+
+   reload();
 
 };
 
-
+// class="modal-backdrop fade show"
 
 
 
@@ -217,6 +225,7 @@ post.addEventListener('submit',function(e){
         let dateformat=year + "-" + month + "-" + day;
         return dateformat;
 
+
     
     }
    
@@ -248,6 +257,7 @@ post.addEventListener('submit',function(e){
 
 
     console.log(imagefile,salutation , first ,last , gmail ,phNo , dformat , gender,address,country,state,city,pin,username,password,qualification);
+    console.log(dformat);
 
  const details={
     imgfile:imagefile,
@@ -285,8 +295,10 @@ post.addEventListener('submit',function(e){
  .then(res => res.json())
  .then(data=>{
     console.log(data);
+
+    refresh();
+
  })
- refresh();
  console.log(details);
 
 })

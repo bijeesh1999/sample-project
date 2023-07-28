@@ -120,6 +120,7 @@ function deldet(id){
             document.getElementById("popup").style.visibility="hidden";
 
     refresh();
+    
         }
     })
     
@@ -138,9 +139,6 @@ function cancel(){
     document.getElementById("popup").style.visibility="hidden";
 
 }
-
-
-
 function dashboard(){
     document.getElementById("empcontainer").style.visibility="hidden";
 }
@@ -153,3 +151,7 @@ function ok(){
     document.getElementById("edit").style.display="none";
 
 }
+function reload(){
+    location.reload();
+}
+

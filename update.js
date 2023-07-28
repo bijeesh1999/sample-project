@@ -92,16 +92,7 @@ function update(id){
         lastName:document.getElementById("validation02").value,
         email:document.getElementById("exampleInputEmail1").value,
         phone:document.getElementById("typephone").value,
-
-
         dob:document.getElementById("date").value,
-
- 
-
-
-
-
-        
         gender:document.getElementsByTagName("name").value,
 
         username:document.getElementById("Username").value,
@@ -141,13 +132,18 @@ function update(id){
     })
 
     .then(res => res.json())
-        .then(employe =>{console.log(employe)
+        .then(employe =>{
+            console.log(employe)
 
             refresh();
+            document.getElementById("edit").style.display="grid";
 
         })
+
+        // document.getElementById("formupdate").style.display="none";
+        
    
-        document.getElementById("edit").style.display="grid";
+        // document.getElementById("edit").style.display="grid";
 
 
     });
